@@ -1,0 +1,24 @@
+--- a/src/sdl_common/audio.c
++++ b/src/sdl_common/audio.c
+@@ -138,9 +138,9 @@
+     int flags = 0;
+ 
+     // Wii and Wii U use ModPlug instead of MikMod, so MIX_INIT_MOD is not required
+-#if !defined(__WII__) && !defined(__WIIU__)
+-     flags |= MIX_INIT_MOD;
+-#endif
++//#if !defined(__WII__) && !defined(__WIIU__)
++//     flags |= MIX_INIT_MOD;
++//#endif
+ 
+     int initted = Mix_Init(flags);
+     if((initted & flags) != flags)
+@@ -202,7 +202,7 @@
+     }
+ 
+     char filename[kMaxSoundFilenameLength] = "";
+-    snprintf(filename, kMaxSoundFilenameLength, "%s/music-%s.xm", kBaseAudioFolder, musicSuffix);
++    snprintf(filename, kMaxSoundFilenameLength, "%s/music-%s.flac", kBaseAudioFolder, musicSuffix);
+ 
+     gMusic = Mix_LoadMUS(filename);
+ 

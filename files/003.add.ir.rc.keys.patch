@@ -1,0 +1,33 @@
+--- a/src/sdl2/keyboard.c
++++ b/src/sdl2/keyboard.c
+@@ -134,8 +134,8 @@
+         }
+     }
+ 
+-    gIsEscapeKeyPressed = keys[SDL_SCANCODE_ESCAPE];
+-    gIsSpaceKeyPressed = keys[SDL_SCANCODE_SPACE];
++    gIsEscapeKeyPressed = keys[SDL_SCANCODE_ESCAPE] || keys[SDL_SCANCODE_EXIT];
++    gIsSpaceKeyPressed = keys[SDL_SCANCODE_SPACE] || keys[SDL_SCANCODE_INFO];
+     gIsUpKeyPressed = keys[SDL_SCANCODE_UP] || keys[SDL_SCANCODE_KP_8];
+     gIsDownKeyPressed = keys[SDL_SCANCODE_DOWN] || keys[SDL_SCANCODE_KP_2];
+     gIsLeftKeyPressed = keys[SDL_SCANCODE_LEFT] || keys[SDL_SCANCODE_KP_4];
+@@ -155,8 +155,8 @@
+     gIsScrollLockPressed = keys[SDL_SCANCODE_SCROLLLOCK];
+     gIsLeftAltPressed = keys[SDL_SCANCODE_LALT];
+     gIsLeftShiftPressed = keys[SDL_SCANCODE_LSHIFT];
+-    gIsRightShiftPressed = keys[SDL_SCANCODE_RSHIFT];
+-    gIsEnterPressed = keys[SDL_SCANCODE_RETURN];
++    gIsRightShiftPressed = keys[SDL_SCANCODE_RSHIFT] || keys[SDL_SCANCODE_BLUE];
++    gIsEnterPressed = keys[SDL_SCANCODE_RETURN] || keys[SDL_SCANCODE_OK];
+     gIsLeftControlPressed = keys[SDL_SCANCODE_LCTRL];
+     gIs1KeyPressed = keys[SDL_SCANCODE_1];
+     gIs2KeyPressed = keys[SDL_SCANCODE_2];
+@@ -173,7 +173,7 @@
+     gIsQKeyPressed = keys[SDL_SCANCODE_Q];
+     gIsWKeyPressed = keys[SDL_SCANCODE_W];
+     gIsRKeyPressed = keys[SDL_SCANCODE_R];
+-    gIsPKeyPressed = keys[SDL_SCANCODE_P];
++    gIsPKeyPressed = keys[SDL_SCANCODE_P] || keys[SDL_SCANCODE_PLAYPAUSE];
+     gIsSKeyPressed = keys[SDL_SCANCODE_S];
+     gIsDKeyPressed = keys[SDL_SCANCODE_D];
+     gIsHKeyPressed = keys[SDL_SCANCODE_H];

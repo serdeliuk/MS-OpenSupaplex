@@ -1,0 +1,16 @@
+diff -Naur a/Makefile b/Makefile
+--- a/Makefile	1970-01-01 01:00:00.000000000 +0100
++++ b/Makefile	2021-12-16 22:02:05.018452357 +0100
+@@ -0,0 +1,12 @@
++src = $(wildcard src/*.c) $(wildcard src/sdl2/*.c) $(wildcard src/sdl_common/*.c) src/lib/ini/ini.c src/null/virtualKeyboard.c
++obj = $(src:.c=.o)
++
++LDFLAGS += -lSDL2_mixer -lvorbis -logg `pkg-config sdl2 --libs` -lm
++
++CFLAGS += `pkg-config sdl2 --cflags` -DHAVE_SDL2
++
++opensupaplex: $(obj)
++	$(CC) -o $@ $^ $(LDFLAGS)
++
++clean:
++	rm $(obj)
