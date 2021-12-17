@@ -8,7 +8,6 @@
 
 #### This repository contain openembedded bitbake recipes for OpenSupaplex game and MS-OpenSupaplex Enigma2 plugin
 - OpenSupaplex
-- Libspectrum 1.4.4
 - MS-OpenSupaplex enigma2 plugin
 
 ## Usage
