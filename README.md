@@ -1,5 +1,7 @@
 # MS-OpenSupaplex [![download](https://img.shields.io/github/downloads/serdeliuk/MS-OpenSupaplex/total)](https://github.com/serdeliuk/MS-OpenSupaplex/releases/download/1/msopensupaplex-ipk-packages.zip)
 
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/serdeliuk) any donation is highly appreciated!
+
 ### OpenSuppaplex ported to Vu Solo4K Enigma2 ARM STB box
 
 
@@ -28,7 +30,4 @@
 - [sergiou87](https://github.com/sergiou87/open-supaplex)
 
 Enjoy!!!<br>
-
-
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/serdeliuk) any donation is highly appreciated!
 
